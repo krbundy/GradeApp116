@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+    <title>Course Grade</title>
+
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+</header>
+
+<body>
+    <div class="container">
+        {% block content %}
+        {{input|safe}}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

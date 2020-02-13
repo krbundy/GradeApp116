@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+	<title> MAT 116 Grade Calculator</title>
+	<link rel="stylesheet" href="/static/styles/main.css">
+</head>
+<body>
+	<div class="container">
+		<h1>
+			<center>MAT 116 Grade Calculator </center>
+		</h1>
+		
+		<p><b>Instructions:</b> Enter the grades in their designated box.  Give all scores in percentage format without the percentage sign.  For example, a 40/50=80% would be entered as 80.</p>
+		
+		{% block content %}
+		{% for message in form.test_one_score.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.test_two_score.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.test_three_score.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.test_four_score.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.final_exam_score.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.quiz_average.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.homework_average.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.project_score.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.video_quiz_average.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		
+		{% for message in form.attendance_score.errors %}
+		<div class="flash">{{message}}</div>
+		{% endfor %}
+		<form method=post>
+			
+			{{form.test_one_score.label}}
+			{{form.test_one_score}}
+			
+			{{form.test_two_score.label}}
+			{{form.test_two_score}}
+			
+			{{form.test_three_score.label}}
+			{{form.test_three_score}}
+			
+			{{form.test_four_score.label}}
+			{{form.test_four_score}}
+			
+			{{form.final_exam_score.label}}
+			{{form.final_exam_score}}
+			
+			{{form.quiz_average.label}}
+			{{form.quiz_average}}
+			
+			{{form.homework_average.label}}
+			{{form.homework_average}}
+			
+			{{form.project_score.label}}
+			{{form.project_score}}
+			
+			{{form.video_quiz_average.label}}
+			{{form.video_quiz_average}}
+			
+			{{form.attendance_score.label}}
+			{{form.attendance_score}}
+			
+			{{form.submit}}
+			
+		</form>
+		
+		{% endblock %}
+		
+	</div>
+		
+</body>
+
+</html>
